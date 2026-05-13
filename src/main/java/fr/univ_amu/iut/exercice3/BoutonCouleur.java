@@ -20,7 +20,7 @@ public class BoutonCouleur extends Button {
   // TODO exercice 3 : ajouter une IntegerProperty nbClics et une String couleur.
   //
   // 1. Déclarer un champ IntegerProperty nbClics (SimpleIntegerProperty, valeur 0).
-  //
+
   // 2. Déclarer un champ String couleur (la couleur CSS du bouton, ex: "red").
   //
   // 3. Implémenter le constructeur BoutonCouleur(String texte, String couleur) :
@@ -45,6 +45,7 @@ public class BoutonCouleur extends Button {
   public BoutonCouleur(String texte, String couleur) {
     super(texte);
     this.couleur = couleur;
+    setOnAction(e -> nbClics.set(nbClics.get() + 1));
   }
 
   public int getNbClics() {
